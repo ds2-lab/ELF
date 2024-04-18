@@ -20,7 +20,7 @@ Package Installation
 ```bash
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt-get install -y gcc g++ libeigen3-dev make
+sudo apt-get install -y gcc g++ libeigen3-dev make python3-pip
 ```
 Build ELF and DE
 ```bash
