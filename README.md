@@ -16,5 +16,10 @@ The preprint of our VLDB'24 paper can be viewed at: https://arxiv.org/abs/2402.1
 This branch contains the source code of ELF & ELVES.
 
 ## ELF Build
+package installation
+'''
+sudo apt-get update
+sudo apt-get install -y gcc g++ libeigen3-dev
+'''
 
 ## ELVES Examples
