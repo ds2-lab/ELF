@@ -43,7 +43,7 @@ python3 main.py
 ```
 ./build/elf_pthread -c -i ELVES/model_compressed/elves_compression/distilbert-base-cased/fl_weights/f32_65783040.bin -p f32 -o ELVES/model_compressed/elves_compression/distilbert-base-cased/exponential_dedup/f32/ -n 65783040
 ```
-Parameter Explanation
+### Parameter Explanation
 | Parameter | Explanation |
 |:----------|:----------|
 | -i | input binary file |
@@ -52,6 +52,7 @@ Parameter Explanation
 | -c | compression      |
 | -d | decompression    |
 | -o | output folder specified |
+
 
 
 
