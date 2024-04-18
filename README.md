@@ -16,10 +16,25 @@ The preprint of our VLDB'24 paper can be viewed at: https://arxiv.org/abs/2402.1
 This branch contains the source code of ELF & ELVES.
 
 ## ELF Build
-package installation
-'''bash
+Package Installation
+```bash
 sudo apt-get update
+sudo apt-get upgrade
 sudo apt-get install -y gcc g++ libeigen3-dev
-'''
+```
+Build ELF and DE
+```bash
+mkdir build
+make
+```
 
 ## ELVES Examples
+Package Installation
+```
+pip3 install -r requirements.txt
+```
+Run the Example
+```
+cd ELVES
+python3 main.py
+```
