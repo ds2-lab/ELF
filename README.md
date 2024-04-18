@@ -17,7 +17,7 @@ This branch contains the source code of ELF & ELVES.
 
 ## ELF Build
 package installation
-'''
+'''bash
 sudo apt-get update
 sudo apt-get install -y gcc g++ libeigen3-dev
 '''
