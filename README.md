@@ -1,8 +1,8 @@
 # ELF
 
-ELF (Exponent-Less Float-point encoding) is a simple yet effective, near-errorless floating-point compression method, that transforms floating-point parameters within pre-trained models (PTMs) in such a way that the common exponent field of the transformed parameters can be completely eliminated to save storage space. ELF is embarrassingly parallel via data parallelism, achieving an extreme compression & decompression speed. 
+ELF (Exponent-Less Float-point encoding) is a simple yet effective, near-lossless floating-point compression method, that transforms floating-point parameters within pre-trained models (PTMs) in such a way that the common exponent field of the transformed parameters can be completely eliminated to save storage space. ELF is embarrassingly parallel via data parallelism, achieving an extreme compression & decompression speed. 
 <div align="center">
-  <img width="350" alt="elf_com_decom" src="https://github.com/alexsssu/ELF/assets/21178173/1f34bb93-2fda-4baa-ab42-6be21eb32b3e">
+  <img width="350" alt="elf_com_decom" src="https://github.com/ds2-lab/ELF/assets/21178173/9c673335-a588-48f7-a8a1-88e6e916781a">
 </div>
 
 
