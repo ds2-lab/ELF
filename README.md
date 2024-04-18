@@ -40,10 +40,18 @@ python3 main.py
 ```
 
 ## ELF Usage
+```
+./build/elf_pthread -c -i ELVES/model_compressed/elves_compression/distilbert-base-cased/fl_weights/f32_65783040.bin -p f32 -o ELVES/model_compressed/elves_compression/distilbert-base-cased/exponential_dedup/f32/ -n 65783040
+```
 Parameter Explanation
 | Parameter | Explanation |
 |:----------|:----------|
-| Row 1 Col 1 | Row 1 Col 2 |
-| Row 2 Col 1 | Row 2 Col 2 |
-| Row 3 Col 1 | Row 3 Col 2 |
+| -i | input binary file |
+| -p | parameter type, f16 for floating 16, f32 for floating 32, f64 for floating 64 |
+| -n | parameter number |
+| -c | compression      |
+| -d | decompression    |
+| -o | output folder specified |
+
+
 
