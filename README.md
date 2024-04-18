@@ -28,7 +28,7 @@ mkdir build
 make
 ```
 
-## ELVES Examples
+## ELVES Compression Examples
 Package Installation
 ```
 pip3 install -r requirements.txt
