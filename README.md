@@ -47,7 +47,7 @@ python3 main.py
 | Parameter | Explanation |
 |:----------|:----------|
 | -i | input binary file |
-| -p | parameter type, f16 for floating 16, f32 for floating 32, f64 for floating 64 |
+| -p | parameter type: f16 for floating 16, f32 for floating 32, f64 for floating 64 |
 | -n | parameter number |
 | -c | compression      |
 | -d | decompression    |
