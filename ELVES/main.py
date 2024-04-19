@@ -98,11 +98,13 @@ def cmp_overview(model_path_list):
     #gzip_total = 0
     #zstd_total = 0
     for model_name in model_name_list:
-        model_path = model_original_folder+model_name+"/pytorch_model.bin"
+        model_item_folder_name = model_name.replace('/', '_')
+        model_path = model_original_folder+model_item_folder_name+"/pytorch_model.bin"
+        print("model_path:", model_path)
         model_size_org = os.path.getsize(model_path)
         org_total += model_size_org
 
-        model_elves_path = model_elves_compression+model_name+"/pytorch_model.tar.zst"
+        model_elves_path = model_elves_compression+model_item_folder_name+"/pytorch_model.tar.zst"
         model_size_elves = os.path.getsize(model_elves_path) + model_hd_size_dict[model_name] 
         elves_total += model_size_elves
 
@@ -227,7 +229,8 @@ def get_repeated_hash_layer_size():
         hash_dedup_size_total += layer_size
 
     for model_name in model_name_list:
-        model_path = model_original_folder+model_name+"/pytorch_model.bin"
+        model_item_folder_name = model_name.replace('/', '_')
+        model_path = model_original_folder+model_item_folder_name+"/pytorch_model.bin"
         try:
             model = torch.load(model_path, map_location='cpu')
         except Exception as e:
@@ -248,7 +251,8 @@ def get_repeated_hash_layer_size():
     model_hd_size_dict = dict()
     for model_name in model_name_list:
         model_hd_size_dict[model_name] = 0
-        model_path = model_original_folder+model_name+"/pytorch_model.bin"
+        model_item_folder_name = model_name.replace('/', '_')
+        model_path = model_original_folder+model_item_folder_name+"/pytorch_model.bin"
         try:
             model = torch.load(model_path, map_location='cpu')
         except Exception as e:
