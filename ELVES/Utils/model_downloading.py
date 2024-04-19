@@ -14,7 +14,9 @@ def model_downloading(model_name_list):
         cnt += 1
 
 def model_downloading_fun(model_name):
-    model_foler = model_original_folder+model_name+"/"
+    # Use the replace method to change '/' to '_' for folder & path management.
+    model_item_folder_name = model_name.replace('/', '_')
+    model_foler = model_original_folder+model_item_folder_name+"/"
     folder_making_fun(model_foler)
     model_path = model_foler+"pytorch_model.bin"
     if not os.path.exists(model_path):
@@ -26,9 +28,3 @@ def model_downloading_fun(model_name):
             model = AutoModelForSequenceClassification.from_pretrained(model_name)
         torch.save(model.state_dict(), model_path)
 
-'''
-def folder_making_fun(folder):
-    if not os.path.exists(os.path.dirname(folder)):
-        #print("Making dir:", folder)
-        os.makedirs(os.path.dirname(folder))
-'''
