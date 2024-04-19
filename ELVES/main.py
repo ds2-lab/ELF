@@ -124,7 +124,6 @@ def cmp_DE(model_weights_path_list):
     cnt = 0
     for model_weights_file in model_weights_path_list:
         print("\n", cnt, model_weights_file)
-        #print(cnt, model_weights_file, os.path.getsize(model_weights_file)/MB, "MB.")
         cnt += 1 
         distance_reference([model_weights_file])
         #sys.exit()
