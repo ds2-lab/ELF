@@ -90,7 +90,6 @@ def get_elf_cmp_folder_list(model_elves_compression):
     return model_elf_cmp_folder_list
 
 def cmp_overview(model_path_list):
-    #print("\n~~~~~~~~~~ Compression Evaluation Summary ~~~~~~~~~~")
     model_hd_size_dict = get_repeated_hash_layer_size()
     #delete_folder(dup_layer_folder)
     cnt = 0
