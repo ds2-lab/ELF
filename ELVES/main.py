@@ -201,36 +201,6 @@ def cmp_zstd(model_path_list, model_elves_compression):
 
         #all the intermediate folder & files should be deleted in the end.
         #delete_folder(de_folder)
-        
-
-def ELVES(model_elves_compression):
-    print("\n~~~~~~~~~~ ELVES Decompressing ~~~~~~~~~~")
-    cnt = 0
-    for model_name in model_name_list:
-        cnt += 1
-        print("Model:", model_name, " Decompressing...")
-        model_path = model_original_folder+model_name+"/pytorch_model.bin"
-        model_decmp_folder = model_decompressed_folder + model_name + "/"
-        folder_making_fun(model_decmp_folder)
-        model_decmp_path = model_decmp_folder+"pytorch_model_decmp.bin"
-        if os.path.exists(model_decmp_path):
-            continue
-        if model_decompression_dict[model_name] != model_elves_compression+model_name+"/exponential_dedup/":
-            shutil.copy(model_path, model_decmp_path)
-        else:
-            exponent_decompression(model_name, model_decmp_folder, model_decmp_path)
-
-        delete_folder(model_decompression_dict[model_name])
-        delete_file(model_elves_compression+model_name+"/model_structure.pkl")
-        non_fl_folder = model_elves_compression+model_name+"/non_fl_layers"
-        if os.path.exists(non_fl_folder):
-            delete_folder(non_fl_folder)
-        
-        '''
-        source_folder = model_compressed_folder+"dup_layer_folder"
-        output_file = model_compressed_folder+"dup_layer_folder.tar"
-        compress_folder(source_folder, output_file)
-        '''
 
 # for compression 
 def compress_folder(source_folder, output_file):
