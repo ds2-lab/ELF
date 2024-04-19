@@ -195,7 +195,6 @@ def cmp_zstd(model_path_list, model_elves_compression):
         #model_zstd_cmp_size = os.path.getsize(model_zstd_path)
         #print(model_zstd_path, rounding(model_zstd_cmp_size/MB), ", CR:", rounding(model_org_size/model_zstd_cmp_size), '\n')
         cnt += 1
-        #sys.exit()
 
         #all the intermediate folder & files should be deleted in the end.
         #delete_folder(de_folder)
